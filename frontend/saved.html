@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saved Responses - AI Code Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="saved.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="brand">
+          <div class="logo">⌘</div>
+          <div>
+            <h1>Saved Responses</h1>
+            <p>Your saved AI explanations, fixes and optimizations</p>
+          </div>
+        </div>
+
+        <a href="index.html" class="saved-back-link"> ← Back to Assistant </a>
+      </header>
+
+      <main class="saved-page">
+        <div class="saved-heading">
+          <h2>My Saved Responses</h2>
+          <button id="refreshSavedBtn" type="button">Refresh</button>
+        </div>
+
+        <p id="savedMessage" role="status">Loading saved responses...</p>
+
+        <div class="saved-filters">
+          <input
+            type="text"
+            id="searchSaved"
+            placeholder="Search by title, code or response..."
+          />
+
+          <select id="filterType">
+            <option value="All">All Types</option>
+            <option value="Explain">Explain</option>
+            <option value="Debug">Debug</option>
+            <option value="Optimize">Optimize</option>
+          </select>
+
+          <select id="filterLanguage">
+            <option value="All">All Languages</option>
+            <option value="javascript">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="cpp">C++</option>
+            <option value="c">C</option>
+            <option value="typescript">TypeScript</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+          </select>
+        </div>
+
+        <div id="savedResponsesList"></div>
+      </main>
+    </div>
+    <script src="auth-guard.js"></script>
+    <script src="saved.js"></script>
+  </body>
+</html>

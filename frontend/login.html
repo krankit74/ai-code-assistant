@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | AI Code Assistant</title>
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+    <main class="auth-container">
+      <a href="register.html" class="back-link">← Create account</a>
+
+      <div class="auth-card">
+        <div class="brand-icon">✦</div>
+        <h1>Welcome back</h1>
+        <p class="subtitle">Sign in to your AI Code Assistant.</p>
+
+        <form id="loginForm">
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+            maxlength="254"
+          />
+
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+          />
+
+          <p
+            id="authMessage"
+            class="auth-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <button id="submitBtn" type="submit">Sign in</button>
+        </form>
+
+        <p class="auth-footer">
+          New here?
+          <a href="register.html">Create an account</a>
+        </p>
+      </div>
+    </main>
+
+    <script src="auth.js"></script>
+  </body>
+</html>

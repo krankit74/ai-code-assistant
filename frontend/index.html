@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AI Code Assistant</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Main Application -->
+    <div class="app">
+      <!-- Header -->
+      <header class="header">
+        <div class="brand">
+          <div class="logo">⌘</div>
+
+          <div>
+            <h1>AI Code Assistant</h1>
+            <p>Understand • Debug • Optimize</p>
+          </div>
+        </div>
+
+        <div class="connection-status">
+          <span class="status-dot"></span>
+          Gemini Connected
+        </div>
+      </header>
+
+      <!-- Main Workspace -->
+      <main class="workspace">
+        <!-- Left Side: Code Editor -->
+        <section class="panel code-panel">
+          <div class="panel-header">
+            <div>
+              <span class="panel-title">CODE</span>
+              <select id="languageSelect" class="language-select">
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="cpp">C++</option>
+                <option value="c">C</option>
+                <option value="typescript">TypeScript</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+              </select>
+            </div>
+
+            <button id="clearBtn" class="clear-btn">Clear</button>
+          </div>
+
+          <div class="editor">
+            <div id="lineNumbers" class="line-numbers">1</div>
+
+            <textarea
+              id="codeInput"
+              spellcheck="false"
+              placeholder="// Write or paste your code here..."
+            ></textarea>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="actions">
+            <button id="explainBtn" class="action-btn">
+              <span>✦</span>
+              Explain
+            </button>
+
+            <button id="debugBtn" class="action-btn">
+              <span>⚡</span>
+              Debug
+            </button>
+
+            <button id="optimizeBtn" class="action-btn">
+              <span>↗</span>
+              Optimize
+            </button>
+          </div>
+        </section>
+
+        <!-- Right Side: AI Response -->
+        <section class="panel response-panel">
+          <div class="panel-header">
+            <div>
+              <span class="panel-title">AI RESPONSE</span>
+            </div>
+
+            <div class="ai-status">
+              <span class="status-dot"></span>
+              Ready
+            </div>
+          </div>
+
+          <div id="response" class="response-content">
+            <div class="welcome">
+              <div class="welcome-icon">✦</div>
+
+              <h2>Your AI coding companion</h2>
+
+              <p>Write some code and choose an action to get started.</p>
+
+              <div class="suggestions">
+                <div class="suggestion">
+                  <strong>Explain</strong>
+                  <span>Understand how your code works</span>
+                </div>
+
+                <div class="suggestion">
+                  <strong>Debug</strong>
+                  <span>Find errors and get fixes</span>
+                </div>
+
+                <div class="suggestion">
+                  <strong>Optimize</strong>
+                  <span>Improve your code</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Save button response container ke bahar rakho -->
+          <button id="saveResponseBtn" type="button" hidden>
+            💾 Save Response
+          </button>
+
+          <p id="saveMessage" role="status"></p>
+        </section>
+
+        <!-- Analysis History -->
+        <section class="history-panel">
+          <div class="history-header">
+            <div>
+              <span class="panel-title">RECENT ANALYSES</span>
+            </div>
+
+            <button id="clearHistoryBtn" class="clear-history-btn">
+              Clear History
+            </button>
+          </div>
+
+          <div id="historyList" class="history-list">
+            <div class="empty-history">No analyses yet</div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <span>AI Code Assistant</span>
+
+        <span>Powered by Gemini</span>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/javascript.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

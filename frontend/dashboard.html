@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - AI Code Assistant</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="brand">
+          <div class="logo">⌘</div>
+          <div>
+            <h1>AI Code Assistant</h1>
+            <p>Your personal coding dashboard</p>
+          </div>
+        </div>
+
+        <div class="dashboard-header-actions">
+          <a class="dashboard-link" href="index.html"> ← Open Assistant </a>
+
+          <button id="logoutBtn" type="button" class="logout-btn">
+            Logout
+          </button>
+        </div>
+      </header>
+
+      <main class="dashboard-page">
+        <section class="dashboard-welcome">
+          <h2 id="welcomeMessage">Welcome back!</h2>
+          <p>Track your saved AI responses and coding activity.</p>
+        </section>
+
+        <section class="dashboard-stats">
+          <article class="stat-card">
+            <span>Total Saved Responses</span>
+            <h2 id="totalSaved">—</h2>
+          </article>
+
+          <article class="stat-card">
+            <span>Explain Responses</span>
+            <h2 id="totalExplain">—</h2>
+          </article>
+
+          <article class="stat-card">
+            <span>Debug Responses</span>
+            <h2 id="totalDebug">—</h2>
+          </article>
+
+          <article class="stat-card">
+            <span>Optimize Responses</span>
+            <h2 id="totalOptimize">—</h2>
+          </article>
+        </section>
+
+        <section class="dashboard-section">
+          <div class="dashboard-section-heading">
+            <h2>Programming Languages</h2>
+          </div>
+          <div id="languageStats" class="language-stats">
+            Loading statistics...
+          </div>
+        </section>
+
+        <section class="dashboard-section">
+          <div class="dashboard-section-heading">
+            <h2>Recent Saved Responses</h2>
+            <a href="saved.html">View all →</a>
+          </div>
+
+          <div id="recentActivity">Loading recent activity...</div>
+        </section>
+      </main>
+    </div>
+
+    <script src="auth-guard.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

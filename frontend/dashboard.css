@@ -1,0 +1,143 @@
+.dashboard-page {
+  padding: 24px;
+}
+
+.dashboard-welcome {
+  margin-bottom: 28px;
+}
+
+.dashboard-welcome h2 {
+  margin-bottom: 8px;
+}
+
+.dashboard-welcome p,
+.stat-card span {
+  color: #8b949e;
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.stat-card,
+.dashboard-section {
+  background: #111820;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.stat-card span {
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  margin: 14px 0 0;
+  font-size: 28px;
+  color: #58a6ff;
+}
+
+.dashboard-section {
+  margin-bottom: 22px;
+}
+
+.dashboard-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.dashboard-section-heading h2 {
+  font-size: 18px;
+}
+
+.dashboard-section-heading a,
+.dashboard-link {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.language-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.language-stat {
+  padding: 12px 16px;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+}
+
+.language-stat strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.language-stat span {
+  color: #8b949e;
+  font-size: 12px;
+}
+
+.activity-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #30363d;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-item p {
+  color: #8b949e;
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard-page {
+    padding: 16px;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logout-btn {
+  padding: 9px 14px;
+  background: #da3633;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.logout-btn:hover {
+  background: #f85149;
+}
+
+@media (max-width: 500px) {
+  .dashboard-header-actions {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+}

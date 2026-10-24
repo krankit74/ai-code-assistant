@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account | AI Code Assistant</title>
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+    <main class="auth-container">
+      <a href="login.html" class="back-link">← Sign in</a>
+
+      <div class="auth-card">
+        <div class="brand-icon">✦</div>
+        <h1>Create your account</h1>
+        <p class="subtitle">Start building smarter with AI.</p>
+
+        <form id="registerForm">
+          <label for="name">Full name</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Your name"
+            autocomplete="name"
+            required
+            maxlength="100"
+          />
+
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required
+            maxlength="254"
+          />
+
+          <label for="password">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="At least 8 characters"
+            autocomplete="new-password"
+            minlength="8"
+            required
+          />
+
+          <label for="confirmPassword">Confirm password</label>
+          <input
+            id="confirmPassword"
+            name="confirmPassword"
+            type="password"
+            placeholder="Enter password again"
+            autocomplete="new-password"
+            minlength="8"
+            required
+          />
+
+          <p
+            id="authMessage"
+            class="auth-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <button id="submitBtn" type="submit">Create account</button>
+        </form>
+
+        <p class="auth-footer">
+          Already have an account?
+          <a href="login.html">Sign in</a>
+        </p>
+      </div>
+    </main>
+
+    <script src="auth.js"></script>
+  </body>
+</html>
