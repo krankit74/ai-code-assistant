@@ -186,18 +186,21 @@ explainBtn.addEventListener("click", async function () {
     console.log("Code from frontend:");
     console.log(code);
 
-    const result = await fetch("http://localhost:3000/api/explain", {
-      method: "POST",
+    const result = await fetch(
+      "https://ai-code-assistant-fxw0.onrender.com/api/explain",
+      {
+        method: "POST",
 
-      headers: {
-        "Content-Type": "application/json",
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+          code: code,
+          language: languageSelect.value,
+        }),
       },
-
-      body: JSON.stringify({
-        code: code,
-        language: languageSelect.value,
-      }),
-    });
+    );
 
     const data = await result.json();
 
@@ -256,18 +259,21 @@ debugBtn.addEventListener("click", async function () {
     console.log("Code sent for debugging:");
     console.log(code);
 
-    const result = await fetch("http://localhost:3000/api/debug", {
-      method: "POST",
+    const result = await fetch(
+      "https://ai-code-assistant-fxw0.onrender.com/api/debug",
+      {
+        method: "POST",
 
-      headers: {
-        "Content-Type": "application/json",
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+          code: code,
+          language: languageSelect.value,
+        }),
       },
-
-      body: JSON.stringify({
-        code: code,
-        language: languageSelect.value,
-      }),
-    });
+    );
 
     const data = await result.json();
 
@@ -314,18 +320,21 @@ optimizeBtn.addEventListener("click", async function () {
     console.log("Code sent for optimization:");
     console.log(code);
 
-    const result = await fetch("http://localhost:3000/api/optimize", {
-      method: "POST",
+    const result = await fetch(
+      "https://ai-code-assistant-fxw0.onrender.com/api/optimize",
+      {
+        method: "POST",
 
-      headers: {
-        "Content-Type": "application/json",
+        headers: {
+          "Content-Type": "application/json",
+        },
+
+        body: JSON.stringify({
+          code: code,
+          language: languageSelect.value,
+        }),
       },
-
-      body: JSON.stringify({
-        code: code,
-        language: languageSelect.value,
-      }),
-    });
+    );
 
     const data = await result.json();
 
@@ -579,14 +588,17 @@ if (saveResponseBtn) {
     saveResponseBtn.textContent = "Saving...";
 
     try {
-      const result = await fetch("http://localhost:3000/api/saved-responses", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+      const result = await fetch(
+        "https://ai-code-assistant-fxw0.onrender.com/api/saved-responses",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(latestAIResponse),
         },
-        body: JSON.stringify(latestAIResponse),
-      });
+      );
 
       const data = await result.json();
 

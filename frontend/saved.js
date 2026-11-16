@@ -22,12 +22,15 @@ async function loadSavedResponses() {
   savedResponsesList.innerHTML = "";
 
   try {
-    const result = await fetch("http://localhost:3000/api/saved-responses", {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${token}`,
+    const result = await fetch(
+      "https://ai-code-assistant-fxw0.onrender.com/api/saved-responses",
+      {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       },
-    });
+    );
 
     const data = await result.json();
 
@@ -126,7 +129,7 @@ function renderResponseCards(responses) {
 
       try {
         const result = await fetch(
-          `http://localhost:3000/api/saved-responses/${encodeURIComponent(item._id)}`,
+          `https://ai-code-assistant-fxw0.onrender.com/api/saved-responses/${encodeURIComponent(item._id)}`,
           {
             method: "DELETE",
             headers: {

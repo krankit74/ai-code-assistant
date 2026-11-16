@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api/auth";
+const API_URL = "https://ai-code-assistant-fxw0.onrender.com/api/auth";
 
 const registerForm = document.getElementById("registerForm");
 const loginForm = document.getElementById("loginForm");
